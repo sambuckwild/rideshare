@@ -85,7 +85,6 @@ The cleaning pipeline is found in [clean.py](https://github.com/JCurley10/superv
 
 ### Feature Importance Plots
 
-### Partial Dependency Plots
 
 ## Conclusion
 **Based on insights from the model, what plans do we propose to reduce churn?**
