@@ -111,6 +111,7 @@ I wanted to plot the scores vs all the different K values but didn't get to it i
 #### Logistic Regression
 We ran a logistic regression using K-Fold cross validation with 10 folds. The beta values for each feature were: 
 
+- avg_dist: 0.0345
 - avg_rating_by_driver: 0.0345
 - avg_rating_of_driver: 0.1257
 - avg_surge: -0.0011
