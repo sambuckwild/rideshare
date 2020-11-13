@@ -64,7 +64,7 @@ The cleaning pipeline is found in [clean.py](https://github.com/JCurley10/superv
 #### Adjusting Data Types:
 - `phone`: Replaced "Android" with 1 and "iPhone" with 2
 - `signup_date`:  The original data was a string; we converted from a string to a datetime 
--`last_trip_date`: **Our Target** This date was first converted from string to a datetime, then a boolean where "True" means they churned (the last trip date was before June 1), or "False" means they are retained (the last trip was after June 1.)
+- `last_trip_date`: **Our Target** This date was first converted from string to a datetime, then a boolean where "True" means they churned (the last trip date was before June 1), or "False" means they are retained (the last trip was after June 1.)
 
 #### Handling NAN Values:
 `phone`,  `avg_rating_of_driver` `avg_rating_by_driver` had NAN values, so we dropped the rows that had at least one NAN value. In the end there were 33132 rows in the training dataset, `churn_train.csv` 
