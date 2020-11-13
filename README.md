@@ -58,6 +58,13 @@ The NAN values represent a type of person: For instance, the people who have NAN
 
 ## Cleaning and EDA 
 
+![](images/driver_rate_churn_compare.svg) 
+
+![](images/avg_dist_churn_compare.svg) 
+
+![](images/weekday_pct_churn_compare.svg) 
+
+
 ### Cleaning
 The cleaning pipeline is found in [clean.py](https://github.com/JCurley10/supervised-learning-case-study/blob/master/clean.py)
 
