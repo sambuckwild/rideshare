@@ -1,3 +1,7 @@
+# Churn Prediction for Ride-Share Company, "Lyber"
+
+![rideshare](https://www.sharedmobility.news/wp-content/uploads/2017/10/shared11.png)
+
 - [Background](#Background)
 - [The Task](#The-Task)
 - [The Data](#The-Data)
@@ -35,7 +39,7 @@ We were given a csv file that represented user information from data pulled on J
 - `luxury_car_user`: TRUE if the user took a luxury car in their first 30 days; FALSE otherwise 
 - `weekday_pct`: the percent of the user’s trips occurring during a weekday
 
-Overall, there were 50000 rows and 12 columns in the original dataset. `phone`,  `avg_rating_of_driver`, and `avg_rating_by_driver` had 396, 8122, and 201 NAN values, respectively. 
+Overall, there were 50000 rows and 12 columns in the original `churn.csv ` dataset. The columns for `phone`,  `avg_rating_of_driver`, and `avg_rating_by_driver` had 396, 8122, and 201 NAN values, respectively. 
 
 
 ## Initial Hypotheses and Predictions 
@@ -51,8 +55,20 @@ Upon looking at the column names, and given our own experienes with ride-sharing
 The NAN values represent a type of person: For instance, the people who have NAN values for ```avg_rating_by_driver``` represent a type of person who doesn't leave ratings. That might have something to do with whether they churn. Unfortunately, that is beyond the scope of this analysis. 
 
 ## Cleaning and EDA 
-- singup date   - The original data was a string; we converted to a datetime 
-  - **The Target** : If the user completed a trip since June 1, 2014, they are an active user. 
+
+### Cleaning
+The cleaning pipeline is found in [clean.py](https://github.com/JCurley10/supervised-learning-case-study/blob/master/clean.py)
+
+#### Adjusting Data Types:
+- `phone`: Replaced "Android" with 1 and "iPhone" with 2
+- `signup_date`:  The original data was a string; we converted from a string to a datetime 
+-`last_trip_date`: **Our Target** This date was first converted from string to a datetime, then a boolean where "True" means they churned (the last trip date was before June 1), or "False" means they are retained (the last trip was after June 1.)
+
+#### Handling NAN Values:
+`phone`,  `avg_rating_of_driver` `avg_rating_by_driver` had NAN values, so we dropped the rows that had at least one NAN value. In the end there were 33132 rows in the training dataset, `churn_train.csv` 
+
+### EDA
+
 
 ## Analysis
 
