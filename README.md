@@ -112,14 +112,14 @@ I wanted to plot the scores vs all the different K values but didn't get to it i
 We ran a logistic regression using K-Fold cross validation with 10 folds. The beta values for each feature were: 
 
 - avg_dist: 0.0345
-- avg_rating_by_driver: 0.0345
-- avg_rating_of_driver: 0.1257
-- avg_surge: -0.0011
-- phone: 0.5629
-- surge_pct: 1.0876
-- trips_in_first_30_days: -0.0067
-- luxury_car_user: -0.1051
-- weekday_pct: -0.8486  
+- avg_rating_by_driver: 0.1257
+- avg_rating_of_driver: -0.0011
+- avg_surge: 0.5629
+- phone: 1.0876
+- surge_pct: -0.0067
+- trips_in_first_30_days: -0.1051
+- luxury_car_user: -0.8486
+- weekday_pct: -0.0003
 
 The following statistics were determined from performing the cross validation:   
 
