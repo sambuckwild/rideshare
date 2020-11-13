@@ -58,6 +58,10 @@ The NAN values represent a type of person: For instance, the people who have NAN
 
 ## Cleaning and EDA 
 
+![](images/driver_rate_churn_compare.svg) 
+
+
+
 ### Cleaning
 The cleaning pipeline is found in [clean.py](https://github.com/JCurley10/supervised-learning-case-study/blob/master/clean.py)
 
@@ -78,6 +82,30 @@ The cleaning pipeline is found in [clean.py](https://github.com/JCurley10/superv
 
 ### Models: Knn, Logistic Regression, Random Forest  
 #### Knn
+
+Taking a look at how a KNN model performs on the data set I first randomly gussed a K in order just to see how that would respond to the data and the confusion matrix.
+
+![first_confusion](images/confusion_matrix_5.png)
+
+For this first confusion matrix I used a K of 5. Here you can see here that the true positive is at 2081 while type I error is at 1,271 and type II error is at 1086. 
+
+Moving forward I wanted to get a better idea what K to use, so I looked at how different values of K correlate to the MSE of the prediction. 
+
+![MSE](images/mse.png)
+
+Here I used k values between 1-25 and calculated the MSE in each iteration to see what would be best.
+
+I wanted to also calculate 
+
+Finally, I chose a K value of 11 as that is when the MSE began to steady out. Then creating a confusion matrix with the new K produce slightly better results.
+
+![second_confusion](images/confusion_matrix_11.png))
+
+Taking a final look at the score produced by a K of 11 I found a accuracy of 0.72884.
+
+I wanted to plot the scores vs all the different K values but didn't get to it in time.
+
+![scores](images/scores.png))
 
 #### Logistic Regression
 We ran a logistic regression using K-Fold cross validation with 10 folds. The beta values for each feature were: 
@@ -103,9 +131,20 @@ We also created a confusion matrix to visualize the results.
 
 #### Random Forest
 
+In order to implement the Random Forest model with our rideshare dataset, we decided to drop the columns for “City”, “Last Trip Date” and “Signup Date” and assign our model with the Random State of 42. After fitting the data to our training dataset our Team was impressed with the ‘out of box’ performance with the Random Forest model default parameters (Accuracy Score = 72.3%). However, we wanted to improve our Accuracy Score by fine-tuning the following hyperparameters: Number of Trees, Max Tree Depth and Minimum Samples Split. We decided to iterate through desired values and evaluate the performance of our Random Forest model. After iterating through, we ended up with the hyperparameters tuned to:
+
+* Number of Trees = 250
+* Max Tree Depth = 10
+* Min Samples Split = 5
+
 ### Feature Importance Plots
 
 
 ## Conclusion
 **Based on insights from the model, what plans do we propose to reduce churn?**
 For our **random forest model**, there were a few features that were most important in predicting if a customer churned or not. The Top 2 features based on their importance were average distance traveled and percentage of weekday trips. So, we are proposing to incentivize riders who are traveling longer distances (i.e. longer than 10 miles since the mean was 5 miles per training dataset) as well as riders that utilize the rideshare service during business hours. The incentive could be 10% off the next rider’s ride fee if they take a rider longer than 10 miles or use the service during the work week (Monday - Friday 9am - 5pm, excluding holidays)
+
+The potential impacts of implementing these decisions will reduce the overall revenue of the rideshare company. However, by incentivizing users to take longer trips and to take trips during the work week we believe this will lead to an increase of overall user retention. Thus, increasing the revenue of the company in the long term. One way to test out these recommendations would be to perform some A/B testing giving some users the discount while not giving the other users the discount and evaluate the retention after a period of 3-6 months.
+
+
+
