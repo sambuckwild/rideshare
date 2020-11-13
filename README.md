@@ -75,7 +75,6 @@ The cleaning pipeline is found in [clean.py](https://github.com/JCurley10/superv
 
 ### EDA
 
-![](images/image.png)
 
 
 ![](images/driver_rate_churn_compare.svg) 
