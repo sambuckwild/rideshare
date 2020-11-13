@@ -9,7 +9,7 @@ def to_date(df):
 
 
 def drop_nan_ratings(df):
-    df.dropna(subset=['avg_rating_by_driver', 'avg_rating_of_driver'], inplace=True)
+    df.dropna(subset=['avg_rating_by_driver', 'avg_rating_of_driver', 'phone'], inplace=True)
 
     return df
 
