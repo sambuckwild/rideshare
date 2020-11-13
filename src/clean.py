@@ -8,7 +8,11 @@ def to_date(df):
     return df
 
 
+<<<<<<< HEAD:clean.py
 def drop_nan_ratings(df):
+=======
+def drop_nans(df):
+>>>>>>> origin/sam:src/clean.py
     df.dropna(subset=['avg_rating_by_driver', 'avg_rating_of_driver', 'phone'], inplace=True)
 
     return df
@@ -39,6 +43,16 @@ def hot_encode(df):
 
     return df
 
+def clean_this_df(file):    
+    '''    cleans the dataframe according to clean.py    '''    
+    df = pd.read_csv(file)    
+    df = to_date(df)    
+    df = create_churn_col(df, 'last_trip_date', '2014-06-01')    
+    df = bool_to_int(df, ['churn', 'luxury_car_user'])    
+    df = hot_encode(df)    
+    df = drop_nans(df)       
+    df.drop(['city', 'last_trip_date', 'signup_date'], axis=1, inplace=True)    
+    return df
 
 def drop_cols(df):
     del df['city']
@@ -47,6 +61,7 @@ def drop_cols(df):
 
 
 if __name__ == '__main__':
+<<<<<<< HEAD:clean.py
     test_file = 'data/churn_train.csv'
     # file = (input("Enter path of filename: "))
     df = pd.read_csv(test_file)
@@ -55,6 +70,11 @@ if __name__ == '__main__':
     df = bool_to_int(df, ['churn', 'luxury_car_user'])
     df = hot_encode(df)
     df = drop_nan_ratings(df)
+=======
+    # test_file = 'data/churn_train.csv'
+    file = (input("Enter path of filename: "))
+    df = clean_this_df(file)
+>>>>>>> origin/sam:src/clean.py
     df.to_csv('data/churn_clean.csv')
 
 
