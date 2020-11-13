@@ -93,6 +93,7 @@ We ran a logistic regression using K-Fold cross validation with 10 folds. The fo
 
 ### Feature Importance Plots
 
-### Partial Dependency Plots
 
 ## Conclusion
+**Based on insights from the model, what plans do we propose to reduce churn?**
+For our **random forest model**, there were a few features that were most important in predicting if a customer churned or not. The Top 2 features based on their importance were average distance traveled and percentage of weekday trips. So, we are proposing to incentivize riders who are traveling longer distances (i.e. longer than 10 miles since the mean was 5 miles per training dataset) as well as riders that utilize the rideshare service during business hours. The incentive could be 10% off the next rider’s ride fee if they take a rider longer than 10 miles or use the service during the work week (Monday - Friday 9am - 5pm, excluding holidays)
