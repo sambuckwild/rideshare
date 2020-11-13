@@ -61,7 +61,7 @@ The NAN values represent a type of person: For instance, the people who have NAN
 
 
 ### Cleaning
-The cleaning pipeline is found in [clean.py](https://github.com/JCurley10/supervised-learning-case-study/blob/master/clean.py)
+The cleaning pipeline is found in [clean.py](https://github.com/JCurley10/supervised-learning-case-study/blob/jess/src/clean.py)
 
 #### Adjusting Data Types:
 - `phone`: Replaced "Android" with 1 and "iPhone" with 2
