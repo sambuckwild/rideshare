@@ -58,8 +58,6 @@ The NAN values represent a type of person: For instance, the people who have NAN
 
 ## Cleaning and EDA 
 
-![](images/driver_rate_churn_compare.svg) 
-
 
 
 ### Cleaning
@@ -77,6 +75,7 @@ The cleaning pipeline is found in [clean.py](https://github.com/JCurley10/superv
 
 ### EDA
 
+![](images/driver_rate_churn_compare.svg) 
 
 ## Analysis
 
@@ -139,6 +138,11 @@ In order to implement the Random Forest model with our rideshare dataset, we dec
 
 ### Feature Importance Plots
 
+After fine-tuning the Random Forest model, we plotted the Features with regard to their overall importance (see below). 
+
+![](images/feature_importance.png)
+
+It is interesting to note that the Top 2 important features were regarding the average ride length and rides taken during the work week.  
 
 ## Conclusion
 **Based on insights from the model, what plans do we propose to reduce churn?**
@@ -148,3 +152,8 @@ The potential impacts of implementing these decisions will reduce the overall re
 
 
 
+### Using our model on the Test data
+The random forest model with 250 models
+- Accuracy = 0.8259352820882955,
+- Precision = 0.830635838150289,
+- Recall = 0.8835827013732322
