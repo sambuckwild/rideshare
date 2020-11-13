@@ -76,7 +76,12 @@ The cleaning pipeline is found in [clean.py](https://github.com/JCurley10/superv
 
 ## Analysis
 
-### Models: Knn, Logistic Regression, Random Forest
+### Models: Knn, Logistic Regression, Random Forest  
+#### Knn
+
+#### Logistic Regression
+
+#### Random Forest
 
 ### Feature Importance Plots
 
