@@ -60,9 +60,6 @@ The NAN values represent a type of person: For instance, the people who have NAN
 
 ![](images/driver_rate_churn_compare.svg) 
 
-![](images/avg_dist_churn_compare.svg) 
-
-![](images/weekday_pct_churn_compare.svg) 
 
 
 ### Cleaning
