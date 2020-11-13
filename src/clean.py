@@ -59,6 +59,7 @@ def drop_cols(df):
     del df['last_trip_date']
     del df['signup_date']
 
+    return df
 
 if __name__ == '__main__':
 <<<<<<< HEAD:clean.py
