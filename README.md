@@ -2,6 +2,8 @@
 
 ![rideshare](https://www.sharedmobility.news/wp-content/uploads/2017/10/shared11.png)
 
+## Table of Contents
+
 - [Background](#Background)
 - [The Task](#The-Task)
 - [The Data](#The-Data)
