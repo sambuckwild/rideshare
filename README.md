@@ -75,8 +75,6 @@ The cleaning pipeline is found in [clean.py](https://github.com/JCurley10/superv
 #### Handling NAN Values:
 `phone`,  `avg_rating_of_driver` `avg_rating_by_driver` had NAN values, so we decided to drop the rows that had at least one NAN value before we split our data. We decided not to impute these NAN's in the interest of time. In the end there were 33132 rows in the training dataset, `churn_train.csv` 
 
-### EDA
-
 
 ## Analysis
 
