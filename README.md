@@ -158,6 +158,6 @@ The potential impacts of implementing these decisions will reduce the overall re
 
 ### Using our model on the Test data
 The random forest model with 250 models
-- Accuracy = 0.8259352820882955,
-- Precision = 0.830635838150289,
-- Recall = 0.8835827013732322
+- Accuracy = 0.8259
+- Precision = 0.8306
+- Recall = 0.8836
