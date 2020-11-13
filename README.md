@@ -98,7 +98,7 @@ The following statistics were determined from performing the cross validation:
 | 0.673 | 0.690 | 0.807 | 0.323| 
 | 67.3% of predicions were correct based on what they really should be | 69% probability that someone actually churned given they were predicted to have churned | 80.7% probability we predict someone to churn given they actually churned | Difference between estimated and actual values| <br>  
 
-These values are not too bad, so we also created a confusion matrix to visualize the results.  
+We also created a confusion matrix to visualize the results.  
 ![](images/log_cm.svg)
 
 #### Random Forest
