@@ -32,4 +32,14 @@ if __name__ == '__main__':
     comparison_bar_plot(x='avg_rating_of_driver', y='churn', df=df, 
     color='m', title='Rider Churn Rate Compared to Avg Rating of Driver', 
     xlabel='Average Rating of Driver', ylabel='Churn Rate', ax=ax)
-    image_of_plot('images/driver_rate_churn_compare.svg')
+    image_of_plot('../images/driver_rate_churn_compare.svg')
+    fig, ax = plt.subplots(figsize=(10, 6))
+    comparison_bar_plot(x='weekday_pct', y='churn', df=df, 
+    color='m', title='Rider Churn Rate Compared to Weekday Percentage', 
+    xlabel='Weekday Percentage', ylabel='Churn Rate', ax=ax)
+    image_of_plot('../images/weekday_pct_churn_compare.svg')
+    fig, ax = plt.subplots(figsize=(10, 6))
+    comparison_bar_plot(x='avg_dist', y='churn', df=df, 
+    color='m', title='Rider Churn Rate Compared to Avg Trip Distance', 
+    xlabel='Average Distance (miles)', ylabel='Churn Rate', ax=ax)
+    image_of_plot('../images/avg_dist_churn_compare.svg')
