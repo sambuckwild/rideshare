@@ -19,9 +19,10 @@ Ride share companies are very popular in the US and worldwide, as they provide o
 Among with new goverment regulations and news scandals, ride-share apps are still wildly popular. But, many people stop using ride-share apps. We want to get to the bottom of this.
 
 ## The Task
-We set out to answer this question for the ride-share company, which we will call **Lyber**:
-**What factors are the best predictors for retention?** 
+We set out to answer this question for the ride-share company, which we will call Lyber:
+- **What factors are the best predictors for retention?** 
 <p>
+  
 To answer this question, we considered a user as a **churn** if they had not taken a trip since June 1, 2014. We used this information as our target to predict in the models we built to explore the question. We also care about building a model that minimizes error and lets us interpret the factors that contributed to our predictions.
 
 ## The Data
