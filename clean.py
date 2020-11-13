@@ -47,6 +47,7 @@ def drop_cols(df):
 
     return df
 
+
 if __name__ == '__main__':
     test_file = 'data/churn_train.csv'
     # file = (input("Enter path of filename: "))
