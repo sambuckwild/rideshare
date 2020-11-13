@@ -44,6 +44,7 @@ def drop_cols(df):
     del df['city']
     del df['last_trip_date']
     del df['signup_date']
+    
 
 
 if __name__ == '__main__':
