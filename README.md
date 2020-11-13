@@ -80,14 +80,26 @@ The cleaning pipeline is found in [clean.py](https://github.com/JCurley10/superv
 #### Knn
 
 #### Logistic Regression
-We ran a logistic regression using K-Fold cross validation with 10 folds. The following statistics were determined from performing the cross validation:   
+We ran a logistic regression using K-Fold cross validation with 10 folds. The beta values for each feature were: 
+
+- avg_rating_by_driver: 0.0345
+- avg_rating_of_driver: 0.1257
+- avg_surge: -0.0011
+- phone: 0.5629
+- surge_pct: 1.0876
+- trips_in_first_30_days: -0.0067
+- luxury_car_user: -0.1051
+- weekday_pct: -0.8486  
+
+The following statistics were determined from performing the cross validation:   
 
 | **Average Accuracy** | **Average Precision** | **Average Recall** | **Average MSE** | 
 | :--------: | :-------: | :-------: | :------: |
 | 0.673 | 0.690 | 0.807 | 0.323| 
 | 67.3% of predicions were correct based on what they really should be | 69% probability that someone actually churned given they were predicted to have churned | 80.7% probability we predict someone to churn given they actually churned | Difference between estimated and actual values| <br>  
 
-
+These values are not too bad, so we also created a confusion matrix to visualize the results.  
+![](images/log_cm.svg)
 
 #### Random Forest
 
