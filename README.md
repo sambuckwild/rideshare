@@ -75,6 +75,8 @@ The cleaning pipeline is found in [clean.py](https://github.com/JCurley10/superv
 #### Handling NAN Values:
 `phone`,  `avg_rating_of_driver` `avg_rating_by_driver` had NAN values, so we decided to drop the rows that had at least one NAN value before we split our data. We decided not to impute these NAN's in the interest of time. In the end there were 33132 rows in the training dataset, `churn_train.csv` 
 
+### EDA
+
 
 ## Analysis
 
@@ -137,6 +139,11 @@ In order to implement the Random Forest model with our rideshare dataset, we dec
 
 ### Feature Importance Plots
 
+After fine-tuning the Random Forest model, we plotted the Features with regard to their overall importance (see below). 
+
+![](images/feature_importance.png)
+
+It is interesting to note that the Top 2 important features were regarding the average ride length and rides taken during the work week.  
 
 ## Conclusion
 **Based on insights from the model, what plans do we propose to reduce churn?**
