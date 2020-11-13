@@ -51,6 +51,7 @@ Upon looking at the column names, and given our own experienes with ride-sharing
   
 - ```weekday_pct``` : We theoried that a higher weekday percentage would mean the peson is more likely using it  for work than for leisure, and this would mean a person with a higher ```weekday_pct``` would be **less** likely to churn.  
 - ```avg_surge``` and ```surge_pct```: If these values are high, we think that these users may be more likely to stick with the program since they're willing to suck up the additional surge cost because they truly need this service. 
+- ```avg_rating_of_driver```: maybe people hate it because they hate the drivers?
 - ```phone```: A person may be more likely to churn due to the ride-share app on the specific model of phone they have (iPhone or Android). Sam made a good point about this one: Perhaps the app on a one phone model is worse than the app on another, and the user is more likely to churn because using the app is a pain in the butt. We'll leave that to the app developers once we present them with our findings.  
 <p>
   
