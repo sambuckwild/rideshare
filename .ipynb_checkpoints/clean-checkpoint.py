@@ -39,6 +39,17 @@ def hot_encode(df):
     return df
 
 
+<<<<<<< HEAD:.ipynb_checkpoints/clean-checkpoint.py
+=======
+def drop_cols(df):
+    del df['city']
+    del df['last_trip_date']
+    del df['signup_date']
+
+    return df
+
+
+>>>>>>> origin/robert:clean.py
 if __name__ == '__main__':
     # test_file = 'data/churn_train.csv'
     file = (input("Enter path of filename: "))
