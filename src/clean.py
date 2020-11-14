@@ -8,6 +8,7 @@ def to_date(df):
     return df
 
 
+
 def drop_nans(df):
     df.dropna(subset=['avg_rating_by_driver', 'avg_rating_of_driver', 'phone'], inplace=True)
 
@@ -54,7 +55,6 @@ def drop_cols(df):
     del df['city']
     del df['last_trip_date']
     del df['signup_date']
-    
 
     return df
 
@@ -63,3 +63,7 @@ if __name__ == '__main__':
     file = (input("Enter path of filename: "))
     df = clean_this_df(file)
     df.to_csv('data/churn_clean.csv')
+
+
+
+
