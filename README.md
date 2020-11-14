@@ -66,7 +66,7 @@ The NAN values represent a type of person: For instance, the people who have NAN
 The cleaning pipeline is found in [clean.py](https://github.com/JCurley10/supervised-learning-case-study/blob/jess/src/clean.py)
 
 #### Adjusting Data Types:
-- `phone`: Replaced "Android" with 1 and "iPhone" with 2
+- `phone`: Replaced "Android" with 1 and "iPhone" with 0
 - `signup_date`:  The original data was a string; we converted from a string to a datetime 
 - `last_trip_date`: **Our Target**
   - First the data were converted from string to a datetime, then a boolean where "True" means they churned (the last trip date was before June 1), or "False" means they are retained (the last trip was after June 1, 2014)
@@ -144,6 +144,8 @@ In order to implement the Random Forest model with our rideshare dataset, we dec
 * Number of Trees = 250
 * Max Tree Depth = 10
 * Min Samples Split = 5
+
+After we re-ran the model with the tuned hyperparameters we say an increase in accuracy from the initial model to 75.7% which is an increase of about 4.7% overall. Then we took the tuned Random Forest model and wanted to evaluate which features were the most imporant to get some additional insight.
 
 ### Feature Importance Plots
 

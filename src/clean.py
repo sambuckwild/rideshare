@@ -8,8 +8,13 @@ def to_date(df):
     return df
 
 
+<<<<<<< HEAD
 def drop_nans(df):
 
+=======
+
+def drop_nans(df):
+>>>>>>> 933abd485ac0b6d451748a5598f8949b649aad13
     df.dropna(subset=['avg_rating_by_driver', 'avg_rating_of_driver', 'phone'], inplace=True)
 
     return df
