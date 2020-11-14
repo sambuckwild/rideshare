@@ -145,6 +145,8 @@ In order to implement the Random Forest model with our rideshare dataset, we dec
 * Max Tree Depth = 10
 * Min Samples Split = 5
 
+After we re-ran the model with the tuned hyperparameters we say an increase in accuracy from the initial model to 75.7% which is an increase of about 4.7% overall. Then we took the tuned Random Forest model and wanted to evaluate which features were the most imporant to get some additional insight.
+
 ### Feature Importance Plots
 
 After fine-tuning the Random Forest model, we plotted the Features with regard to their overall importance (see below). 
